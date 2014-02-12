@@ -1,0 +1,79 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>El temps a Colera</title>
+<meta name="viewport" content="width=device-width,user-scalable=1" />
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script>
+$(document).bind('mobileinit',function(){
+	$.mobile.defaultPageTransition="fade";
+	$.mobile.minScrollBack=150;
+	$.mobile.activeBtnClass="active-button";
+	$.mobile.loadingMessage="Cargando...";
+	$.mobile.pageLoadErrorMessage="Error Cargando Página";
+	$.mobile.page.prototype.options.closeBtnText="Cerrar";
+	$.mobile.touchOverflownEnabled=true; 
+	$.mobile.page.prototype.options.footerTheme = "b";
+	$.support.cors=true;
+	$.mobile.pushSate=false;
+	$.mobile.allowCrossDomainPages=true;
+	$('#myResult').load('indexweb.html').trigger('create');	
+});
+function mostrar_datos(){
+	$('#myResult').load('indexweb.html').trigger('create');
+};
+function mostrar_datos2(){
+	 $('#myResult').load('previsiones.html').trigger('create');
+};
+function salir(){
+	 navigator.app.exitApp();
+};
+
+</script>
+  <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="principal" data-fullscreen="true" style=" background-image:url(images/ticks.png) repeat;">
+	<div data-role="header" data-position="fixed"  >
+    	
+    	<h1>Tiempo en Colera</h1>
+<!--        <a  data-icon="back" data-rel="back" data-iconpos="right">Atras</a> -->
+     </div>
+	    <div data-role="content" class="ui-content">
+    	
+        <div data-role="navbar">
+        	<ul>
+            	<li><a href="javascript:mostrar_datos();"   data-icon="cloud">Consultar el tiempo</a></li>
+                <li><a href="javascript:mostrar_datos2();"  data-icon="info">Previsiones Colera</a></li>
+            </ul>
+        </div>
+        
+
+        <br />
+        <div id="myResult">...Espere por favor, recuperando datos.</div>
+ <script>
+ $('#myResult').load('indexweb.html').trigger('create');
+$(document).bind('mobileinit',function(){
+
+ $('#myResult').load('indexweb.html',function(){
+	$('#myResult').trigger('create');
+	});
+});
+    </script>
+	<div data-role="footer"  data-position="fixed">
+    	<div data-role="navbar">
+        	<ul>
+            	<li><a href="http://www.artinfinity.net" data-icon="action" data-rel="external" target="_blank">WeB</a></li>
+                <li><a href="mailto:valenti.luque@artinfinity.net?subject=Contacto%20por%20Aplicacion%20Mobil" data-icon="mail">Mail</a></li>
+                <li><a href="tel:+34633474047" data-icon="phone">Llamar</a></li>
+            </ul>
+            
+        </div>
+        
+        <p></p>
+    </div>
+</div>
+</body>
+</html>

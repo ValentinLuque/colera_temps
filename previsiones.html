@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7; IE=EmulateIE9" />
+<meta name="title" content="El tiempo" />
+<meta name="description" content="El tiempo en tu ciudad" />
+<meta name="keywords" content="tiempo llança,temperatura, prevision tiempo, latitud, longitud, humdedad, presion, visibilidad, direccion viento, tipo viento, nudos, sensación térmica, geolocalizacion" />
+<meta name="DC.language" scheme="RFC1766" content="spanish" />
+<meta name="author" content="www.artinifinity.net Valentin Luque Mestanza info@artinfinity.net" />
+<meta name="robots" content="all / index / follow" /> 
+<meta http-equiv="Cache-Control" content="cache">
+<meta http-equiv="window-target" content="_top" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/llancaweb.js"></script>
+<script type="text/javascript" src="js/jquerypp.custom.js"></script>
+<script src="compas/compass.js"></script>
+<script src="js/utiles.js"></script>
+<script src="js/modernizr.custom.17475.js"></script>
+<script>
+$(document).ready(function(e) { 
+//recuperar datos del tiempo 
+
+
+$('#yahoo').recuperarxml("weather.yahooapis.com/forecastrss?w=");
+	
+
+//recuperar datos de flick
+//$('#prevision').previsionxml();
+
+$('#resultado').localizaxml($('[name="ciudad"]').val(),'#resultado');
+cwoeid=direccion['Codigo '];
+$('#prevision').previsionxml({woeid:cwoeid});	
+
+}); //fin document ready
+</script>
+<title>El Tiempo</title>
+</head>
+<body>
+<style>
+.oculto{display:none;}
+li { list-style:none;}
+.fuerte{font-weight:bold; font-family:Verdana, Geneva, sans-serif;}
+body{background:url(images/subtle.png) repeat;font-family: 'Roboto', sans-serif;  }
+.circular{
+	 width: 100px;
+	 height: 100px;	
+ 	display: block;
+ 	background-size: cover;
+ 	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	margin-top:5px;
+}
+
+</style>
+<div id="principal">
+<div id="wrapper">
+<div id="cabecera">
+<div id="meteoclima" class="izquierda redondeadas cazul grande">
+	<div id="yahoo"></div>
+ </div> <!-- Fin meteoclima -->
+</div><!--cabecera -->       
+ <div id="cuerpo" >    
+  <div id="vientoDIV">
+        	<div  class="centro"><canvas id="compass" class="oculto" width="190" height="200"></canvas></div>
+     
+        </div><!-- End DIVatmosfera-->
+
+       
+</div> <!-- final DIVCupero -->
+<div id="prevision"><h3>Previsiones Colera </h3>
+<div id="prevision00">
+        	<ul class="listasUL">         	
+        		<li id="dia00" class="fuerte"></li>
+                <li id="fecha00"></li>
+        		<li id="max00"></li>
+                <li id="min00"></li>
+                <li id="icono00"></li> 
+            </ul>	
+        </div><!-- End DIV00-->
+<div id="prevision01">
+        	<ul class="listasUL">
+            	<li id="dia01" class="fuerte"></li>         	
+        		<li id="fecha01"></li>
+        		<li id="max01"></li>
+                <li id="min01"></li>
+                <li id="icono01"></li>                           
+            </ul>	
+        </div><!-- End DIV01-->
+<div id="prevision02" >
+        	<ul class="listasUL">         	
+        		<li id="dia02" class="fuerte"></li>
+                <li id="fecha02"></li>
+        		<li id="max02"></li>
+                <li id="min02"></li>
+                <li id="icono02"></li>
+            </ul>	
+        </div><!-- End DIV02-->
+		<div id="prevision03" >
+        	<ul class="listasUL">         	
+        		<li id="dia03"></li>
+                <li id="fecha03"></li>
+        		<li id="max03"></li>
+                <li id="min03"></li>
+                <li id="icono03" class="tcentro"></li>                            
+            </ul>	
+        </div><!-- End DIV03-->
+		<div id="prevision04" class="izquierda redondeadas_3">
+        	<ul class="listasUL">         	
+        		<li id="dia04" class="fuerte"></li>
+                <li id="fecha04"></li>
+        		<li id="max04"></li>
+                <li id="min04"></li>
+                <li id="icono04" class="tcentro"></li>                          
+            </ul>	
+        </div><!-- End DIV04-->        
+</div> <!-- final prevision -->
+</div> <!--fin contenido principal WRAPPER -->
+    <div id="prova" class="rojo"></div>
+	<div id="tabla"></div>
+	<div id="cargando" class="oculto"> Espere por favor. Cargando datos....</div>
+    <div id="fallo" class="oculto cargando"> Fallo en la carga de datos !!</div>
+<!------------------------------------------- -->
+
+<!------------------------------------------- -->    	
+<!-- ocultos -->
+<div class="oculto">
+<input type="text" id="direccion2" class="oculto"/></input>
+<input type="text" id="latitud2" class="oculto" ></input>
+<input type="text" id="longitud2" class="oculto" ></input>
+<input type="text" id="humedad2"  class="oculto"></input>
+<!-- javascript para slide fotos-->
+</div>
+</div> <!-- principal -->
+ </body>
+</html>

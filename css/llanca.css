@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+padding: 0;
+margin: 0;
+}
+#barometro {
+		width:24px;
+		height:140px;
+		border: 1px solid #111;
+		background-color:#292929;		
+		margin:10px auto;
+}
+#barometro_inte {
+		width: 20px;
+		color: #fff;
+		text-align: right;
+		line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+		background-color: #0099ff;
+		font:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:9px;
+		margin:0px 0px 0px 2px;		
+}
+.redondeadas{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	}
+	.redondeadas_azul{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	padding: 5px 5px 5px 5px;
+	background-color:#13167C;  
+	margin:5px 5px 5px 5px;
+	}
+.redondeadas{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	}
+	.redondeadas_3{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	padding: 5px 5px 5px 5px;
+	background-color:#96B4E4;
+	margin:5px 5px 5px 5px;
+	}
+	.redondeadas_azul2{
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	padding: 5px 5px 5px 5px;
+	background-color:#13167C;
+	float:right;
+	margin:25px 0px 80px 0px;
+	width: 95%;
+	}
+.rojo{background-color:black;color:white;}
+.crojo{color:#790D0B;}
+.cazul{color:#13167C;}
+.cblanco{color:white;}
+.corange{color:#F90;}
+.grande{font-size:18px;}
+.medio{font-size:15px;}
+.oculto{display:none;}
+.margen_inferior{margin:0px 0px 0px 20px;border:1px solid #000;}
+.margen_imagen_luna{margin:57px 0px 5px 0px;}
+.margen_atmosfera{margin:47px 0px 5px 0px;}
+body{font-family:'Open Sans',serif;font-size:12px; margin:0;padding:0;
+ }
+<!-- #principal{width:100%; position:absolute; top:0;left:0; z-index:10; height:100%; } -->
+#wrapper {float:left; }
+#sidebar {width:30%; height:500px; }
+.imagen_lunar{margin-left:auto;margin-right:auto; }
+#geoastroDIV{margin:10px 3px 5px 1px; border:#999 1px solid; padding:5px 5px 5px 5px;}
+#atmosferaDIV{margin:10px 3px 5px 5px; border:#999 1px solid;padding:5px 5px 5px 5px;}
+#vientoDIV{margin:10px 0px 5px 3px; border:#999 1px solid;padding:0 0px 0px 0; display:block; width:100%;}
+#cargando{
+	position:absolute;
+	top:5px;
+	right:5px;
+	background-color:red;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px;
+	}
+.tabla{
+	background-color:blue;	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:.8em;
+	color:white;
+	text-align:center;
+}
+.tabla td{
+	font-size:smaller;
+	text-align:center;
+	color:white;
+	}
+#meteoclima{width:100%;}
+#cuerpo{width:98%;}
+#prepie{width:98%;}
+#pie{ background-color:#000;color:white; width:100%; opacity:0.5;font-family: 'Gloria Hallelujah', cursive; font-size:14px;}
+.cargando{
+	position:absolute;
+	top:5px;
+	right:5px;
+	background-color:red;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px;
+	}
+.fallo{
+	position:absolute;
+	background-color:red;
+	color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px;
+	}
+#mapContainer {
+				width: 95%;
+				height: 80%;					
+			}
+.izquierda{float:left;}
+.derecha{float:right; }
+.margen20{margin:10px 10px 10px 10px;}
+.margen40{margin:10px 10px 10px 30px;}
+.margen5{margin:5px;}
+.imagen_tiempo{margin:30px 0px 0px 80px;}
+.listasUL li
+{
+	margin:0px 0px 0px 0px;
+	list-style:none;	
+}
+.centro{margin:0 auto;}
+.tcentro{text-align:center;}
+input[type="text"] {
+color:#006;
+background: transparent;
+color:#333333;
+border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-khtml-border-radius: 15px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	padding: 5px 5px 5px 5px;
+	margin:0 0 5px 0;
+font-family:'Open Sans',serif;font-size:16px;color:#13167C;
+	background-color:white;}
+.cuadracillo {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: .2em 1em .5em;
+	margin:-5px 1px 1px 1px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');}
+.cuadracillo:hover {
+background:#F63; border-color:#F90;	}
+.cuadracillo:active {
+	position: relative;
+	top: 1px;}
+#centrar_go_cuadro{margin:5px 0px 0px 0px ;}
+#titulo{font-family: 'Gloria Hallelujah', cursive;font-size:36px;}
+a:link{color:#F60; text-decoration:none;}
+a:visited{color:#F60;text-decoration:none;}
+a:hover {color:#FFF;text-decoration:underline;}
+a:active{color:#F60;text-decoration:none;}
+#pop{
+	cursor:pointer;
+	color:#F60;}
+#pop:hover{color:#C00;}
+.popup{
+position: absolute;
+border: 5px solid gray;
+padding: 10px;
+background: white;
+display:none;
+z-index:100;}
+ a.pop2{color:red;}
+ a.pop2:link {text-decoration: none; color: red;}
+ a.pop2:visited {text-decoration: none; color: red;}
+ a.pop2:hover {text-decoration: none; color: red;}
+ a.pop2:active {text-decoration: none; color: red;}
