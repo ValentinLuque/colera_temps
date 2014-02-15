@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "https://build.phonegap.com/apps/776118/builds"
+        versionCode = "01" 
+        version     = "1.0.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>El temps a Colera</name>
+
+    <description>
+        Consulta el temps actual de Colera i altres poblacions, així com la seva previsió meteorológica , vent, astronomia, geolocalització i atmosfera 
+    </description>
+
+    <author href="http://www.artinfinity.net/" email="valenti.luque@artinfinity.net">
+        Valentí Luque Mestanza
+    </author>
+	<icon src="icon.png" />
+	<gap:splash src="splash.png"  width="320" height="480" />
+
+</widget>
